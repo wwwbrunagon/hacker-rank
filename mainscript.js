@@ -39,7 +39,18 @@ console.log(simpleArraySum(ar))
 // Comparing the  1st and 2st  elements, 28>16 and 30>8 so [a] receives two points. 
 // The return array is [2,1]
 
+// tip1:  conditional (ternary) operator >> statement ? trueThing : falseThing
+let a = [17, 28, 30]
+let b = [99, 16, 8]
+
+
 function compareTriplets(a, b) {
-
-
+  const hits = [0,0]
+  for (let i =0; i < 3; i++ ){
+    a[i] > b[i]
+    ? hits[0]++ : a[i] < b[i]
+      ? hits[1]++ : hits[1] = hits[1]
+  }
+  return hits
 }
+console.log(compareTriplets(a,b))
