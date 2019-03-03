@@ -43,6 +43,20 @@ console.log(simpleArraySum(ar))
 let a = [17, 28, 30]
 let b = [99, 16, 8]
 
+// function compareTriplets(a, b) {
+//     const hits = [0,0]
+//     for (let i = 0; i < 3; i++ ){   
+//       if(a[i] > b[i]){
+//         hits[0]++
+//       }else if (a[i] < b[i]){
+//         hits[1]++
+//       } else {
+//         hits[1]=hits[1]
+//       } 
+//     }
+//     return hits
+//   }
+  
 
 function compareTriplets(a, b) {
   const hits = [0,0]
