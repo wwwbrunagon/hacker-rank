@@ -25,7 +25,7 @@ let ar = [1, 2, 3, 4, 10, 11 ]
 function simpleArraySum(ar) {
   return ar.reduce(function(a,b) {return a+b})
 } 
-console.log(simpleArraySum('The result of simpleArraySum  is ' + ar))
+console.log(simpleArraySum(ar))
 
 
 //------------------------------------------------------------------------------
