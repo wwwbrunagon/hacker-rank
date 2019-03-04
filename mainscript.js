@@ -1,9 +1,7 @@
 //Sample simpleArraySum -> Output :31
+let sar = [1, 2, 3, 4, 10, 11 ]
 
-let ar = [1, 2, 3, 4, 10, 11 ]
-
-//-------
-//sample 01 function simpleArraySum(ar) {}
+//-------//sample 01 function simpleArraySum(ar) {}
 // function simpleArraySum(ar) {
 //   let soma = 0 
 //   for(let i = 0; i < ar.length; i++){
@@ -13,7 +11,6 @@ let ar = [1, 2, 3, 4, 10, 11 ]
 // }
 
 //-------//sample 02 function simpleArraySum(ar) {} with forOf
-
 // function simpleArraySum(ar) {
 //   let soma = 0
 //   for(let a of ar){
@@ -23,16 +20,14 @@ let ar = [1, 2, 3, 4, 10, 11 ]
 // console.log(simpleArraySum(ar))
 
 //-------//sample 03 function simpleArraySum(ar) {} with reduce
-
-function simpleArraySum(ar) {
-  return ar.reduce((soma,a) => {return soma+a})
+function simpleArraySum(sar) {
+  return sar.reduce((soma,a) => {return soma+a})
 } 
-console.log(simpleArraySum(ar))
+console.log(simpleArraySum(sar))
 //we use the reduce to get all the values of an array and make them unique
 
 
 //-------------------------------------------------------------------------
-
 // Sample the compareTriplets 
 // a = [17, 28, 30] | b = [99, 16, 8]
 // Comparing the 0th  elements, 17<99  so [b] receives a point. 
@@ -68,3 +63,26 @@ function compareTriplets(a, b) {
   return hits
 }
 console.log(compareTriplets(a,b))
+
+
+//-------------------------------------------------------------------------
+//Sample A Very Big Sum
+//Calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.
+// ar = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
+// Output: 5000000015
+
+const arr = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
+function aVeryBigSum(arr) {
+  return arr.reduce((soma, a) => {return soma+a})
+ }
+
+ console.log(aVeryBigSum(arr))
+
+ //or 
+//  function aVeryBigSum(arr) {
+//   let soma = 0
+//    for(let a of arr){
+//      soma +=a
+//    }return soma
+//  } 
+//  console.log(aVeryBigSum(arr))
