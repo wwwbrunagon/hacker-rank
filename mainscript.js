@@ -109,15 +109,19 @@ Sum across the second diagonal = 4+5+10 = 19 | Difference: |4-19| =15
 
  Complete the diagonalDifference function below.*/
 
- let matrix = [[1,2,3],[4,5,6], [9,8,9]]
- function diagonalDifference(matrix) { 
-     let mainSum = 0, secondarySum = 0;
-     for (let row = 0; row < matrix.length; row++) {
-         mainSum += matrix[row][row];
-         secondarySum += matrix[row][matrix.length - row - 1];
-     }   
-     return Math.abs(mainSum-secondarySum)
+ let matrix = [[1,2,3],
+               [4,5,6],
+               [9,8,9]]
+ let diagonalDifference = (matrix)=> { 
+    let length = matrix.length
+    let sum1 = 0
+    let sum2 = 0
+    for(let i=0; i < length; i++){
+      sum1 += matrix[i][i]
+      sum2 += matrix[i][length-1-i]
+      return Math.abs(sum1-sum2)
+    }
  } 
  console.log(diagonalDifference(matrix))
- 
+
 
