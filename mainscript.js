@@ -177,3 +177,38 @@ function values(b) {
 b is true:
 this.b = true || false; // will evaluate to true
 */
+
+
+/*Staircase 
+The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of .
+Sample Output
+
+     #
+    ##
+   ###
+  ####
+ #####
+######
+*/
+
+
+
+
+function staircase(n) {
+  if (n > 0 && n <= 100 && typeof n === "number" && n === parseInt(n, 0)) {
+    for (let r = 1; r <= n; r++) {
+        let blanks = [ ...[], ...Array(n - r) ].map(i => ' ');
+        let hashes = [ ...[], ...Array(n - (n - r))].map(i => '#');
+        console.log([
+              ...blanks,
+              ...hashes
+        ].join(''));
+    } 
+  }
+}
+console.log(staircase(6))
+
+//repeat(count: number) number of copies
+
+let hw ='hello world'
+console.log(hw.concat(' ').concat('#').repeat(5))
