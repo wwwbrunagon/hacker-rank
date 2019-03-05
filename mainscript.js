@@ -1,6 +1,6 @@
+//01---------------------------------------------------------------------------------------------------
 // simpleArraySum -> Output :31
 let sar = [1, 2, 3, 4, 10, 11 ]
-
 //solution01 function simpleArraySum(ar) {}
 /*function simpleArraySum(ar) {
   let soma = 0 
@@ -18,14 +18,11 @@ function simpleArraySum(ar) {
 } 
 console.log(simpleArraySum(ar))
 */
-
 //solution03 function simpleArraySum(ar) {} with reduce
 function simpleArraySum(sar) {
   return sar.reduce((soma,a) => {return soma+a})
 } 
 console.log(simpleArraySum(sar))
-
-
 
 //we use the reduce to get all the values of an array and make them unique
 /*the compareTriplets 
@@ -64,6 +61,7 @@ function compareTriplets(a, b) {
 }
 console.log(compareTriplets(a,b))
 
+//02---------------------------------------------------------------------------------------------------
 
 /*
 A Very Big Sum
@@ -89,7 +87,7 @@ function aVeryBigSum(arr) {
  console.log(aVeryBigSum(arr))
 
 
-
+//03---------------------------------------------------------------------------------------------------
 /*Diagonal Difference
 Sample Input: 
 3
@@ -124,7 +122,7 @@ Sum across the second diagonal = 4+5+10 = 19 | Difference: |4-19| =15
  } 
  console.log(diagonalDifference(matrix))
 
-
+//04---------------------------------------------------------------------------------------------------
 /*Problem HackerRank’s Plus Minus Code Challenge
 n = length of array arr, between 0 and 100
 arr = array with values between -100 and 100
@@ -178,7 +176,7 @@ b is true:
 this.b = true || false; // will evaluate to true
 */
 
-
+//05---------------------------------------------------------------------------------------------------
 /*Staircase 
 The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of .
 Sample Output
@@ -190,10 +188,6 @@ Sample Output
  #####
 ######
 */
-
-
-
-
 function staircase(n) {
   if (n > 0 && n <= 100 && typeof n === "number" && n === parseInt(n, 0)) {
     for (let r = 1; r <= n; r++) {
@@ -208,7 +202,48 @@ function staircase(n) {
 }
 console.log(staircase(6))
 
+//06---------------------------------------------------------------------------------------------------
 //repeat(count: number) number of copies
-
 let hw ='hello world'
 console.log(hw.concat(' ').concat('#').repeat(5))
+
+let arrHW =[]
+const CreatHW = (item) => {
+  let text = {
+    item: item
+  }
+  arrHW.push(text)
+  
+  return text
+}
+console.log(CreatHW('hello world'))
+
+
+//07---------------------------------------------------------------------------------------------------
+const nums = [3,4,5,6,7,8,9];
+/* l = 3 and r = 9 || The odd numbers between [3,9] are 3,5,7 and 9 */
+
+function oddNumbers(l, r) {
+  let arr = [];
+  for(let i = l; i <= r ; i++){
+    if(i % 2 !== 0)
+      {
+        arr.push(i)
+      }
+  }
+  return arr;
+}
+console.log(oddNumbers(3,9))
+//--------other solution
+const filteredNumbers = nums.filter(number => number % 2);
+console.log(filteredNumbers)
+/*pt-br A função Array.filter itera sob os dados do Array, assim como a função Array.forEach.
+No entanto, ela permite aplicar uma regra para decidir se o elemento fará parte do novo 
+array retornado por ela, isto é, do array filtrado. Se a lógica retornar true ou qualquer 
+valor que o represente, o item fará parte do novo array, caso contrário será excluído. 
+No caso, passamos a lógica como parâmetro através de uma arrow function. Quando chamada,
+teremos acesso ao elemento que esta sendo iterado naquele momento.
+O retorno de number % 2 será o resto da divisão por dois. Se o número for divisível por dois, será 0.
+Todavia, 0 é considerado false e por isso todos os números que forem divisíveis por dois não farão
+parte do array. Qualquer número diferente de 0 é considerado true. Em suma, no final teremos
+uma lista com apenas números ímpares.*/
