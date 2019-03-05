@@ -125,3 +125,55 @@ Sum across the second diagonal = 4+5+10 = 19 | Difference: |4-19| =15
  console.log(diagonalDifference(matrix))
 
 
+/*Problem HackerRank’s Plus Minus Code Challenge
+n = length of array arr, between 0 and 100
+arr = array with values between -100 and 100
+Goal is to console.log 3 values based on the number negative, positive, and zeros present in the array.
+Count the number of (positive, negative, zeros) and divide it by the total length of the array to get the ratio.
+*/
+// -4 3 -9 0 4 1, Expected
+// 0.500000
+// 0.333333
+// 0.166667
+
+const numbers = [-4, 3,-9, 0, 4, 1]
+//map
+// const newNumbersArr = numbers.map((value,index)=>{ 
+//   return index + ': ' + value
+// })
+//  console.log(newNumbersArr)
+//------------------------------------------------------------
+
+
+function plusMinus(numbers) {
+  let positive = 0
+  let negative = 0
+  let zero = 0
+  const length = numbers.length || 0
+  
+  if(length > 0 && length <= 100){
+    numbers.map((value,index)=>{ 
+      if(value > 0){
+        positive++
+      }else if(value < 0 ){
+        negative ++
+      }else {
+        zero++
+      }
+      return index
+    })
+    console.log((positive/length).toFixed(5))
+    console.log((negative/length).toFixed(5))
+    console.log((zero/length).toFixed(5))
+  } 
+}
+console.log(plusMinus(numbers))
+
+/*tip >> console.log((3/6).toFixed(5))
+Using || in an assignment is a way of saying "if defined, otherwise use this".
+function values(b) {
+    this.b = b || 0;
+}
+b is true:
+this.b = true || false; // will evaluate to true
+*/
